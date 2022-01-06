@@ -78,9 +78,3 @@ stages:
               azureSubscription: $(azureSubscription)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-          - task: ArchiveFiles@1
-            displayName: Archive files
-            inputs:
-              rootFolder: $(System.DefaultWorkingDirectory)
-              includeRootFolder: false
-              archiveType: zip
